@@ -1,6 +1,7 @@
 import { AppLoading } from "expo";
-import React from "react";
+import React, { useState } from "react";
 
 export default function App() {
-  return <AppLoading />;
+  const [isReady, setIsReady] = useState(false);
+  return isReady ? null : <AppLoading />;
 }
