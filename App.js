@@ -5,5 +5,7 @@ export default function App() {
   const [isReady, setIsReady] = useState(false);
   const loadAssets = async () => {};
   const onFinish = () => setIsReady(true);
-  return isReady ? null : <AppLoading startAsync={loadAssets} onFinish={onFinish} />;
+  return isReady ? null : (
+    <AppLoading startAsync={loadAssets} onFinish={onFinish} onError={console.error} />
+  );
 }
