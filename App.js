@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { AppLoading } from "expo";
+import * as Font from "expo-font";
 import { Text, Image } from "react-native";
 import { Asset } from "expo-asset";
+import { Ionicons } from "@expo/vector-icons";
 
 const cacheImages = (images) =>
   images.map((image) => {
@@ -11,6 +13,8 @@ const cacheImages = (images) =>
       return Asset.fromModule(image).downloadAsync();
     }
   });
+
+const cacheFonts = (fonts) => fonts.map((font) => Font);
 
 export default function App() {
   const [isReady, setIsReady] = useState(false);
