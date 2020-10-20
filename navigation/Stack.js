@@ -14,6 +14,7 @@ export default ( )=> {
         <Stack.Screen name = "Place" component={Place} />
         <Stack.Screen name = "Recipe" component={Recipe} />
         <Stack.Screen name = "Help" component={Help} />
+        <Stack.Screen name = "Shop" component={Together} />
         <Stack.Screen name = "Shop" component={Shop} />
     </Stack.Navigator>
 }
