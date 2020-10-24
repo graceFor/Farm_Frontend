@@ -8,4 +8,5 @@ export default ({navigation}) => (
     <Button onPress={()=>navigation.navigate("Recipe")} title="Go to Detail" />
     <Button onPress={()=>navigation.navigate("Shop")} title="Go to Detail" />
     <Button onPress={()=>navigation.navigate("Together")} title="Go to Detail" />
+    <Button onPress={()=>navigation.navigate("Help")} title="Go to Detail" />
 </View>)
