@@ -9,13 +9,18 @@ import Together from "../screens/Together";
 
 const Stack = createStackNavigator();
 
-export default () => (
-  <Stack.Navigator>
-    <Stack.Screen name="Home" component={Home} />
-    <Stack.Screen name="Place" component={Place} />
-    <Stack.Screen name="Recipe" component={Recipe} />
-    <Stack.Screen name="Help" component={Help} />
-    <Stack.Screen name="Together" component={Together} />
-    <Stack.Screen name="Shop" component={Shop} />
-  </Stack.Navigator>
-);
+export default ({ route }) => {
+  useEffect(() => {
+    console.log(route?.state?.routeNames[route.state.index]);
+  }, [route]);
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Place" component={Place} />
+      <Stack.Screen name="Recipe" component={Recipe} />
+      <Stack.Screen name="Help" component={Help} />
+      <Stack.Screen name="Together" component={Together} />
+      <Stack.Screen name="Shop" component={Shop} />
+    </Stack.Navigator>
+  );
+};
