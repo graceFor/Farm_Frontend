@@ -15,12 +15,12 @@ const styles = StyleSheet.create({
   },
   button: {
     borderRadius: 20,
-    padding: 10,
-    marginBottom: 5,
+    padding: 12,
+    marginBottom: 8,
     shadowColor: "#303838",
-    shadowOffset: { width: 0, height: 5 },
+    shadowOffset: { width: 0, height: 2 },
     shadowRadius: 10,
-    shadowOpacity: 0.35,
+    shadowOpacity: 0.1,
   },
 });
 
