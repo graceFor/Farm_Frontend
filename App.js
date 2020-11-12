@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { AppLoading } from "expo";
 import * as Font from "expo-font";
 import { Image } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
 import { Asset } from "expo-asset";
 import { Ionicons } from "@expo/vector-icons";
-import { NavigationContainer } from "@react-navigation/native";
 import Stack from "./navigation/Stack";
 
 const cacheImages = (images) =>
@@ -19,7 +19,6 @@ const cacheImages = (images) =>
 const cacheFonts = (fonts) => fonts.map((font) => [Font.loadAsync(font), Font.loadAsync(font)]);
 
 export default function App() {
-  // App 로드 될 때 미리 로드
   const [isReady, setIsReady] = useState(false);
   const loadAssets = () => {
     const images = cacheImages([
