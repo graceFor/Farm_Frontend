@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
   button: {
     borderRadius: 20,
     padding: 10,
-    marginBottom: 20,
+    marginBottom: 5,
     shadowColor: "#303838",
     shadowOffset: { width: 0, height: 5 },
     shadowRadius: 10,
@@ -22,11 +22,18 @@ const styles = StyleSheet.create({
 export default ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Place")}>
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("어디있을까?")}>
         <Image source={require("../assets/where.png")} />
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Place")}>
-        <Image source={require("../assets/where.png")} />
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("도시농부 Guide")}>
+        <Image source={require("../assets/recipe.png")} />
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("다잇다")}>
+        <Image source={require("../assets/many.png")} />
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("공동농업")}>
+        <Image source={require("../assets/help.png")} />
       </TouchableOpacity>
     </View>
   );
