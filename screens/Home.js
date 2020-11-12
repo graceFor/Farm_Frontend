@@ -4,7 +4,12 @@ import { View, TouchableOpacity, StyleSheet, Image } from "react-native";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#ffffff",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  container2: {
+    flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -28,12 +33,16 @@ export default ({ navigation }) => {
       <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("도시농부 Guide")}>
         <Image source={require("../assets/recipe.png")} />
       </TouchableOpacity>
-
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("다잇다")}>
-        <Image source={require("../assets/many.png")} />
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("공동농업")}>
-        <Image source={require("../assets/help.png")} />
+      <View style={styles.container2}>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("다잇다")}>
+          <Image source={require("../assets/many.png")} />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("공동농업")}>
+          <Image source={require("../assets/help.png")} />
+        </TouchableOpacity>
+      </View>
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Shop")}>
+        <Image source={require("../assets/shoo.png")} />
       </TouchableOpacity>
     </View>
   );
